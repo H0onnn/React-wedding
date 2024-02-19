@@ -1,29 +1,47 @@
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
-import './App.css';
+import { useEffect, useState } from 'react';
 import classNames from 'classnames/bind';
-
 import styles from './App.module.scss';
+import FullScreenMessage from '@components/shared/FullScreenMessage';
 
 const cx = classNames.bind(styles);
 
 function App() {
-  return (
-    <div className={cx('container')}>
-      <div>
-        <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank" rel="noreferrer">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  );
+  const [wedding, setWedding] = useState(null);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [isError, setIsError] = useState<boolean>(false);
+
+  useEffect(() => {
+    setIsLoading(true);
+
+    fetch('http://localhost:8888/wedding')
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error('청첩장 정보를 불러오는데 실패했습니다.');
+        }
+
+        return res.json();
+      })
+      .then((data) => {
+        setWedding(data);
+      })
+      .catch((e) => {
+        console.error(e);
+        setIsError(true);
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
+  }, []);
+
+  if (isLoading) {
+    return <FullScreenMessage type="loading" />;
+  }
+
+  if (isError) {
+    return <FullScreenMessage type="error" />;
+  }
+
+  return <div className={cx('container')}>{JSON.stringify(wedding)}</div>;
 }
 
 export default App;
