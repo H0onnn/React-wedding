@@ -7,8 +7,10 @@ const cx = classNames.bind(styles);
 
 const Video = () => {
   return (
-    <Section>
-      <h1 className={cx('video')}>Video</h1>
+    <Section className={cx('container')}>
+      <video autoPlay muted loop poster="/assets/poster.jpg">
+        <source src="/assets/main.mp4" type="video/mp4" />
+      </video>
     </Section>
   );
 };
