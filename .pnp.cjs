@@ -47,6 +47,7 @@ const RAW_RUNTIME_STATE =
           ["react", "npm:18.2.0"],\
           ["react-dom", "virtual:2aff2f060f2eaa1aead584f0d02a59b8381a7b28d8b6bddf7e4be1c580835b71c3a94b22c2b990284cc5b13977a215325775767c8124c2a2bf5de73f08c081e1#npm:18.2.0"],\
           ["sass", "npm:1.71.0"],\
+          ["swiper", "npm:11.0.6"],\
           ["typescript", "patch:typescript@npm%3A5.3.3#optional!builtin<compat/typescript>::version=5.3.3&hash=e012d7"],\
           ["vite", "virtual:2aff2f060f2eaa1aead584f0d02a59b8381a7b28d8b6bddf7e4be1c580835b71c3a94b22c2b990284cc5b13977a215325775767c8124c2a2bf5de73f08c081e1#npm:5.1.3"]\
         ],\
@@ -8727,6 +8728,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["swiper", [\
+      ["npm:11.0.6", {\
+        "packageLocation": "../../../../../.yarn/berry/cache/swiper-npm-11.0.6-f58772ff1e-10c0.zip/node_modules/swiper/",\
+        "packageDependencies": [\
+          ["swiper", "npm:11.0.6"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["synckit", [\
       ["npm:0.8.8", {\
         "packageLocation": "../../../../../.yarn/berry/cache/synckit-npm-0.8.8-f5ee4a6dac-10c0.zip/node_modules/synckit/",\
@@ -9223,6 +9233,7 @@ const RAW_RUNTIME_STATE =
           ["react", "npm:18.2.0"],\
           ["react-dom", "virtual:2aff2f060f2eaa1aead584f0d02a59b8381a7b28d8b6bddf7e4be1c580835b71c3a94b22c2b990284cc5b13977a215325775767c8124c2a2bf5de73f08c081e1#npm:18.2.0"],\
           ["sass", "npm:1.71.0"],\
+          ["swiper", "npm:11.0.6"],\
           ["typescript", "patch:typescript@npm%3A5.3.3#optional!builtin<compat/typescript>::version=5.3.3&hash=e012d7"],\
           ["vite", "virtual:2aff2f060f2eaa1aead584f0d02a59b8381a7b28d8b6bddf7e4be1c580835b71c3a94b22c2b990284cc5b13977a215325775767c8124c2a2bf5de73f08c081e1#npm:5.1.3"]\
         ],\
