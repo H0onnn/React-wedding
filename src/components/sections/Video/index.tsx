@@ -8,7 +8,7 @@ const cx = classNames.bind(styles);
 const Video = () => {
   return (
     <Section>
-      <h1 className={cx('video')}>청첩장</h1>
+      <h1 className={cx('video')}>Video</h1>
     </Section>
   );
 };
