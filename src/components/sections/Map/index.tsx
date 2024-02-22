@@ -36,6 +36,7 @@ const Map = ({ location }: Props) => {
         const options = {
           center: position,
           level: 3,
+          draggable: false,
         };
 
         const marker = new window.kakao.maps.Marker({
