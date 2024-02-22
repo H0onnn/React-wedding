@@ -29,7 +29,7 @@
       "@shared/*": ["src/components/shared/*"],
       "@models/*": ["src/models/*"],
       "@hooks/*": ["src/hooks/*"],
-      "@pages/*": ["src/pages/*"],
+      "@scss/*": ["src/scss/*"],
       "@utils/*": ["src/utils/*"]
     }
   },

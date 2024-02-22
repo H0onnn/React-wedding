@@ -10,6 +10,7 @@ export default defineConfig({
       { find: '@components', replacement: '/src/components' },
       { find: '@shared', replacement: '/src/components/shared' },
       { find: '@models', replacement: '/src/models' },
+      { find: '@scss', replacement: '/scr/scss' },
     ],
   },
 });
