@@ -6,7 +6,7 @@ const cx = classNames.bind(styles);
 interface Props {
   children: React.ReactNode;
   className?: string;
-  title?: string;
+  title?: React.ReactNode;
 }
 
 const Section = ({ children, className, title }: Props) => {

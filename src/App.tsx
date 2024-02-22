@@ -8,6 +8,7 @@ import Video from '@components/sections/Video';
 import Invitation from '@components/sections/Invitation';
 import ImageGallery from '@components/sections/ImageGallery';
 import Intro from '@components/sections/Intro';
+import Calendar from '@components/sections/Calendar';
 
 const cx = classNames.bind(styles);
 
@@ -71,6 +72,7 @@ function App() {
       />
       <Invitation message={invitation} />
       <ImageGallery images={galleryImages} />
+      <Calendar date={date} />
     </div>
   );
 }
