@@ -13,10 +13,11 @@ interface Props {
 
 const ImageGallery = ({ images }: Props) => {
   const [selectedIndex, setSelectedIndex] = useState<number>(-1);
+  const [expanded, setExpanded] = useState<boolean>(false);
 
   const open = selectedIndex !== -1;
 
-  const handleSelectedIamge = (index: number) => {
+  const handleSelectedImage = (index: number) => {
     setSelectedIndex(index);
   };
 
@@ -33,19 +34,35 @@ const ImageGallery = ({ images }: Props) => {
         }
         className={cx('container')}
       >
-        <ul className={cx('wrap-images')}>
+        <ul className={cx(['wrap-images', expanded ? 'open' : ''])}>
           {images.map((src, index) => (
             <li
               key={src}
               className={cx('wrap-imagebox')}
-              onClick={() => handleSelectedIamge(index)}
+              onClick={() => handleSelectedImage(index)}
             >
-              <div className={cx('wrap-image')}>
-                <img src={src} alt="사진" />
-              </div>
+              <img src={src} alt="사진" />
             </li>
           ))}
         </ul>
+
+        {!expanded && (
+          <div className={cx('wrap-buttonbox')}>
+            <div className={cx('cloud')} />
+            <div
+              className={cx('wrap-buttons')}
+              onClick={() => setExpanded(true)}
+            >
+              <div className={cx('ico-arrow')}>
+                <img src="../../../../assets/images/arrow.png" alt="화살표" />
+              </div>
+              <span className={cx('txt-showAll')}>갤러리 더보기</span>
+              <div className={cx('ico-arrow')}>
+                <img src="../../../../assets/images/arrow.png" alt="화살표" />
+              </div>
+            </div>
+          </div>
+        )}
       </Section>
       <ImageViewer
         images={images}
