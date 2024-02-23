@@ -4,12 +4,25 @@
 @import url('./reset.scss');
 
 :root {
+  --pink: #f6f1f3;
+  --button-color: #b5848a;
+  --rsvp-font-color: #b9888e;
+  --rsvp-border-color: #d2bcbf;
+  --ver4-background-color: #fffcfc;
   --red: #ea7664;
   --black: #544f4f;
   --brown: #89757a;
   --beige: #f6f5f5;
 }
 
+html,
 body {
   font-family: 'MaruBuri-Regular';
+  width: auto;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 0;
+  background-color: var(--pink);
+  position: relative;
+  box-shadow: 0 0 20px #0000000d;
 }

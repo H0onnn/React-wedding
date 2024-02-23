@@ -53,27 +53,63 @@ const Map = ({ location }: Props) => {
     <Section
       title={
         <div className={cx('wrap-header')}>
+          <span className={cx('txt-entitle')}>L O C A T I O N</span>
           <span className={cx('txt-title')}>오시는 길</span>
-          <span className={cx('txt-subtitle')}>{location.name}</span>
-          <span className={cx('txt-subtitle')}>{location.address}</span>
+          <div className={cx('wrap-subtitle')}>
+            <span className={cx('txt-subtitle')}>{location.name}</span>
+            <span className={cx('txt-subtitle')}>{location.address}</span>
+          </div>
         </div>
       }
+      className={cx('container')}
     >
       <div className={cx('wrap-map')}>
         <div className={cx('map')} ref={mapContainer}></div>
+      </div>
+
+      <div className={cx('wrap-buttons')}>
         <a
           className={cx('btn-find-way')}
-          href={location.link}
+          href={location.naverLink}
           target="_blank"
           rel="noreferrer"
         >
-          길찾기
+          <img
+            src="https://mcard.cryucard.com/image/icon/navermapIcon.png"
+            alt="네이버지도"
+          />
+          네이버 지도
+        </a>
+        <a
+          className={cx('btn-find-way')}
+          href={location.kakaoLink}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img
+            src="https://mcard.cryucard.com/image/icon/kakaomapIcon.png"
+            alt="카카오맵"
+          />
+          카카오맵
+        </a>
+        <a
+          className={cx('btn-find-way')}
+          href={location.tmapLink}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img
+            src="https://mcard.cryucard.com/image/icon/tmapIcon.png"
+            alt="티맵"
+          />
+          티맵
         </a>
       </div>
 
       <div>
         <WayToCome label="버스" list={location.waytocome.bus} />
         <WayToCome label="지하철" list={location.waytocome.metro} />
+        <WayToCome label="자가용" list={location.waytocome.self} />
       </div>
     </Section>
   );
@@ -92,7 +128,9 @@ const WayToCome = ({ label, list }: WayToComeProps) => {
       <div className={cx('txt-label')}>{label}</div>
       <ul>
         {list.map((item, index) => (
-          <li key={index}>{item}</li>
+          <li key={index} className={cx('txt-waytocome')}>
+            {item}
+          </li>
         ))}
       </ul>
     </div>

@@ -1,9 +1,28 @@
+.container {
+  padding: 50px 24px;
+}
+
+.wrap-title {
+  display: flex;
+  flex-direction: column;
+
+  .txt-entitle {
+    font-size: 10px;
+    color: var(--rsvp-font-color);
+    margin-bottom: 10px;
+  }
+
+  .txt-title {
+    color: var(--rsvp-font-color);
+  }
+}
+
 .wrap-images {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 6px;
 
-  .wrap-image {
+  .wrap-imagebox {
     width: 100%;
     position: relative;
 

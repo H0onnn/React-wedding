@@ -7,15 +7,24 @@ const cx = classNames.bind(styles);
 interface Props {
   label: string;
   children: React.ReactNode;
+  groom?: boolean;
+  bride?: boolean;
 }
 
-const Accordion = ({ label, children }: Props) => {
+const Accordion = ({ label, children, groom, bride }: Props) => {
   const [expanded, setExpanded] = useState<boolean>(false);
 
   const handleToggle = () => setExpanded((prev) => !prev);
 
   return (
-    <div className={cx(['wrap-accordion', expanded ? 'open' : ''])}>
+    <div
+      className={cx([
+        'wrap-accordion',
+        expanded ? 'open' : '',
+        groom ? 'groom' : '',
+        bride ? 'bride' : '',
+      ])}
+    >
       <div className={cx('wrap-header')} onClick={handleToggle}>
         <span>{label}</span>
         <ArrowDown className={cx('ico-arrow-down')} />

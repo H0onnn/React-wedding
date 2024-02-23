@@ -24,15 +24,25 @@ const ImageGallery = ({ images }: Props) => {
 
   return (
     <>
-      <Section title="사진첩">
+      <Section
+        title={
+          <div className={cx('wrap-title')}>
+            <span className={cx('txt-entitle')}>G A L L E R Y</span>
+            <span className={cx('txt-title')}>갤러리</span>
+          </div>
+        }
+        className={cx('container')}
+      >
         <ul className={cx('wrap-images')}>
           {images.map((src, index) => (
             <li
               key={src}
-              className={cx('wrap-image')}
+              className={cx('wrap-imagebox')}
               onClick={() => handleSelectedIamge(index)}
             >
-              <img src={src} alt="사진" />
+              <div className={cx('wrap-image')}>
+                <img src={src} alt="사진" />
+              </div>
             </li>
           ))}
         </ul>

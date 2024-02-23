@@ -5,6 +5,7 @@ export interface Wedding {
   message: {
     intro: string;
     invitation: string;
+    thanksto: string;
   };
   galleryImages: string[];
   attendCount: number;
@@ -21,10 +22,13 @@ export interface Location {
   lng: number;
   name: string;
   address: string;
-  link: string;
+  kakaoLink: string;
+  naverLink: string;
+  tmapLink: string;
   waytocome: {
     metro: string[];
     bus: string[];
+    self: string[];
   };
 }
 

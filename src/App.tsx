@@ -3,15 +3,15 @@ import { Wedding } from '@models/wedding';
 import classNames from 'classnames/bind';
 import styles from './App.module.scss';
 import FullScreenMessage from '@shared/FullScreenMessage';
-import Heading from '@components/sections/Heading';
 import Video from '@components/sections/Video';
 import Invitation from '@components/sections/Invitation';
 import ImageGallery from '@components/sections/ImageGallery';
-import Intro from '@components/sections/Intro';
-import Calendar from '@components/sections/Calendar';
+import Main from '@/components/sections/Main';
+import Calendar from './components/sections/Calendar';
 import Map from '@components/sections/Map';
 import Contact from '@components/sections/Contact';
 import Share from '@components/sections/Share';
+import ThanksTo from '@components/sections/ThanksTo';
 
 const cx = classNames.bind(styles);
 
@@ -59,25 +59,24 @@ function App() {
     groom,
     bride,
     location,
-    message: { intro, invitation },
+    message: { intro, invitation, thanksto },
   } = wedding;
 
   return (
     <div className={cx('container')}>
-      <Heading date={date} />
-      <Video />
-      <Intro
+      <Main
         groomName={groom.name}
         brideName={bride.name}
         date={date}
         locationName={location.name}
-        message={intro}
       />
-      <Invitation message={invitation} />
-      <ImageGallery images={galleryImages} />
+      <Video />
+      <Invitation introMessage={intro} invitationMessage={invitation} />
       <Calendar date={date} />
+      <ImageGallery images={galleryImages} />
       <Map location={location} />
       <Contact groom={groom} bride={bride} />
+      <ThanksTo message={thanksto} />
       <Share groomName={groom.name} brideName={bride.name} weddingDate={date} />
     </div>
   );

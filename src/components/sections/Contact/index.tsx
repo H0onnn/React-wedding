@@ -15,7 +15,7 @@ interface Props {
 const Contact = ({ groom, bride }: Props) => {
   return (
     <Section title="연락처 및 마음 전하실 곳">
-      <Accordion label="신랑측">
+      <Accordion label="신랑측" groom>
         <ContactInfo
           name={groom.name}
           account={groom.account}
@@ -32,7 +32,7 @@ const Contact = ({ groom, bride }: Props) => {
           phoneNumber={groom.parents[1].phoneNumber}
         />
       </Accordion>
-      <Accordion label="신부측">
+      <Accordion label="신부측" bride>
         <ContactInfo
           name={bride.name}
           account={bride.account}
