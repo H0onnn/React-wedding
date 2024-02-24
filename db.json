@@ -87,18 +87,18 @@
       "attend": "모든 분들께\n부족함 없는 예식을 준비하기 위해\n참석 및 식사 여부를\n미리 여쭙고자 합니다.\n\n부담없이 알려주시면\n정성껏 준비하겠습니다."
     },
     "galleryImages": [
-      "/assets/images/wedding_01.jpg",
-      "/assets/images/wedding_02.jpg",
-      "/assets/images/wedding_03.jpg",
-      "/assets/images/wedding_04.jpg",
-      "/assets/images/wedding_05.jpg",
-      "/assets/images/wedding_06.jpg",
-      "/assets/images/wedding_07.jpg",
-      "/assets/images/wedding_08.jpg",
-      "/assets/images/wedding_09.jpg",
-      "/assets/images/wedding_10.jpg",
-      "/assets/images/wedding_11.jpg",
-      "/assets/images/wedding_12.jpg"
+      "wedding_01",
+      "wedding_02",
+      "wedding_03",
+      "wedding_04",
+      "wedding_05",
+      "wedding_06",
+      "wedding_07",
+      "wedding_08",
+      "wedding_09",
+      "wedding_10",
+      "wedding_11",
+      "wedding_12"
     ],
 
     "attendCount": 0

@@ -4,6 +4,7 @@ import styles from './ImageGallery.module.scss';
 
 import Section from '@shared/Section';
 import ImageViewer from '@/components/imageViewer';
+import { generateImageUrl } from '@/utils/generateImageUrl';
 
 const cx = classNames.bind(styles);
 
@@ -41,7 +42,24 @@ const ImageGallery = ({ images }: Props) => {
               className={cx('wrap-imagebox')}
               onClick={() => handleSelectedImage(index)}
             >
-              <img src={src} alt="사진" />
+              <picture>
+                <source
+                  srcSet={generateImageUrl({
+                    fileName: src,
+                    format: 'webp',
+                    option: 'q_auto,c_fill,w_240,h_240',
+                  })}
+                  type="image/webp"
+                />
+                <img
+                  src={generateImageUrl({
+                    fileName: src,
+                    format: 'jpg',
+                    option: 'q_auto,c_fill,w_240,h_240',
+                  })}
+                  alt="웨딩사진"
+                />
+              </picture>
             </li>
           ))}
         </ul>
@@ -54,11 +72,11 @@ const ImageGallery = ({ images }: Props) => {
               onClick={() => setExpanded(true)}
             >
               <div className={cx('ico-arrow')}>
-                <img src="../../../../assets/images/arrow.png" alt="화살표" />
+                <img src="/assets/images/arrow.png" alt="화살표" />
               </div>
               <span className={cx('txt-showAll')}>갤러리 더보기</span>
               <div className={cx('ico-arrow')}>
-                <img src="../../../../assets/images/arrow.png" alt="화살표" />
+                <img src="/assets/images/arrow.png" alt="화살표" />
               </div>
             </div>
           </div>

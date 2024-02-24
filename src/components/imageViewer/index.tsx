@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import './swiper.css';
 import Dimmed from '@shared/Dimmed';
+import { generateImageUrl } from '@/utils/generateImageUrl';
 
 const cx = classNames.bind(styles);
 
@@ -33,7 +34,22 @@ const ImageViewer = ({
       >
         {images.map((src) => (
           <SwiperSlide key={src}>
-            <img src={src} alt="사진" />
+            <picture>
+              <source
+                srcSet={generateImageUrl({
+                  fileName: src,
+                  format: 'webp',
+                })}
+                type="image/webp"
+              />
+              <img
+                src={generateImageUrl({
+                  fileName: src,
+                  format: 'jpg',
+                })}
+                alt="웨딩사진"
+              />
+            </picture>
           </SwiperSlide>
         ))}
       </Swiper>
