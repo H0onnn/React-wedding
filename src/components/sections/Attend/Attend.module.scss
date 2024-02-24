@@ -1,6 +1,5 @@
 .container {
-  padding: 4rem;
-  padding-bottom: 3rem;
+  padding: 3rem 0;
   border: 1px solid var(--rsvp-border-color);
   background-color: var(--ver4-background-color);
   position: relative;
@@ -36,7 +35,7 @@
   align-items: center;
 
   button {
-    padding: 10px 80px;
+    padding: 10px 50px;
     border-radius: 100px;
     background-color: var(--rsvp-border-color);
     font-size: 14px;
