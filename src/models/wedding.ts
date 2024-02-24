@@ -6,7 +6,7 @@ export interface Wedding {
     intro: string;
     invitation: string;
     thanksto: string;
-    modal: string;
+    attend: string;
   };
   galleryImages: string[];
   attendCount: number;
