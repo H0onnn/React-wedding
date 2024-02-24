@@ -6,6 +6,7 @@ export interface Wedding {
     intro: string;
     invitation: string;
     thanksto: string;
+    modal: string;
   };
   galleryImages: string[];
   attendCount: number;

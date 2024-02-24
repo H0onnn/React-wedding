@@ -30,7 +30,8 @@
       "@models/*": ["src/models/*"],
       "@hooks/*": ["src/hooks/*"],
       "@scss/*": ["src/scss/*"],
-      "@utils/*": ["src/utils/*"]
+      "@utils/*": ["src/utils/*"],
+      "@contexts/*": ["src/contexts/*"]
     }
   },
   "include": ["src", "tsconfig.path.json"],

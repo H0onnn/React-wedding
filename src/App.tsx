@@ -13,6 +13,7 @@ import Contact from '@components/sections/Contact';
 import Share from '@components/sections/Share';
 import ThanksTo from '@components/sections/ThanksTo';
 import Information from '@components/sections/Information';
+import AttendModal from '@components/AttendModal';
 
 const cx = classNames.bind(styles);
 
@@ -60,7 +61,7 @@ function App() {
     groom,
     bride,
     location,
-    message: { intro, invitation, thanksto },
+    message: { intro, invitation, thanksto, modal },
   } = wedding;
 
   return (
@@ -80,6 +81,13 @@ function App() {
       <Contact groom={groom} bride={bride} />
       <ThanksTo message={thanksto} />
       <Share groomName={groom.name} brideName={bride.name} weddingDate={date} />
+      <AttendModal
+        message={modal}
+        groomName={groom.name}
+        brideName={bride.name}
+        date={date}
+        location={location.name}
+      />
     </div>
   );
 }
