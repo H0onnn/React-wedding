@@ -14,4 +14,13 @@ export default defineConfig({
       { find: '@contexts', replacement: '/src/contexts' },
     ],
   },
+  server: {
+    proxy: {
+      '/api': {
+        target: 'http://localhost:8888',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ''),
+      },
+    },
+  },
 });
