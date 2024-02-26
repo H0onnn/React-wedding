@@ -1,7 +1,6 @@
 import classNames from 'classnames/bind';
 import styles from './App.module.scss';
 import useWedding from '@/hooks/useWedding';
-import FullScreenMessage from '@shared/FullScreenMessage';
 import Video from '@components/sections/Video';
 import Invitation from '@components/sections/Invitation';
 import ImageGallery from '@components/sections/ImageGallery';
@@ -18,11 +17,7 @@ import Attend from '@components/sections/Attend';
 const cx = classNames.bind(styles);
 
 function App() {
-  const { wedding, isError } = useWedding();
-
-  if (isError) {
-    return <FullScreenMessage type="error" />;
-  }
+  const { wedding } = useWedding();
 
   if (wedding === null) return null;
 
