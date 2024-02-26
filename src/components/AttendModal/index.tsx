@@ -56,20 +56,6 @@ const AttendModal = ({
         localStorage.setItem('@have-seen-modal', 'true');
         close();
       },
-      //   onSubmitButtonClick: async () => {
-      //     if (!$input.current?.value) return;
-
-      //     await fetch('http://localhost:8888/wedding', {
-      //       method: 'PUT',
-      //       ,
-      //       headers: {
-      //         'Content-Type': 'application/json',
-      //       },
-      //     });
-
-      //     localStorage.setItem('@have-seen-modal', 'true');
-      //     close();
-      //   },
     });
   }, []);
 
