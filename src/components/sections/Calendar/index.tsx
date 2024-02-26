@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, memo } from 'react';
 import classNames from 'classnames/bind';
 import styles from './Calendar.module.scss';
 import {
@@ -110,7 +110,7 @@ const Calendar = ({ date }: Props) => {
   );
 };
 
-export default Calendar;
+export default memo(Calendar);
 
 const css = `
     .rdp-caption {

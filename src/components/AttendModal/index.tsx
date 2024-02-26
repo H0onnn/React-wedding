@@ -34,6 +34,8 @@ const AttendModal = ({
   useEffect(() => {
     if (haveSeenModal) return;
 
+    console.log('hi');
+
     open({
       title: '참석의사 전달하기',
       body: (
@@ -57,7 +59,7 @@ const AttendModal = ({
         close();
       },
     });
-  }, []);
+  }, [open, close]);
 
   return null;
 };
