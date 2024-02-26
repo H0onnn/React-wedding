@@ -3,7 +3,7 @@ import classNames from 'classnames/bind';
 import styles from './ImageGallery.module.scss';
 
 import Section from '@shared/Section';
-import ImageViewer from '@/components/imageViewer';
+import ImageViewer from '@components/imageViewer';
 import { generateImageUrl } from '@/utils/generateImageUrl';
 
 const cx = classNames.bind(styles);

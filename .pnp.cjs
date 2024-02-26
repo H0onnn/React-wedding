@@ -27,6 +27,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["@craco/craco", "virtual:2aff2f060f2eaa1aead584f0d02a59b8381a7b28d8b6bddf7e4be1c580835b71c3a94b22c2b990284cc5b13977a215325775767c8124c2a2bf5de73f08c081e1#npm:7.1.0"],\
+          ["@tanstack/react-query", "virtual:2aff2f060f2eaa1aead584f0d02a59b8381a7b28d8b6bddf7e4be1c580835b71c3a94b22c2b990284cc5b13977a215325775767c8124c2a2bf5de73f08c081e1#npm:5.24.1"],\
           ["@types/react", "npm:18.2.56"],\
           ["@types/react-copy-to-clipboard", "npm:5.0.7"],\
           ["@types/react-dom", "npm:18.2.19"],\
@@ -3554,6 +3555,38 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../../../.yarn/berry/cache/@rushstack-eslint-patch-npm-1.7.2-e0ac536367-10c0.zip/node_modules/@rushstack/eslint-patch/",\
         "packageDependencies": [\
           ["@rushstack/eslint-patch", "npm:1.7.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@tanstack/query-core", [\
+      ["npm:5.24.1", {\
+        "packageLocation": "../../../../../.yarn/berry/cache/@tanstack-query-core-npm-5.24.1-3d46abb3a9-10c0.zip/node_modules/@tanstack/query-core/",\
+        "packageDependencies": [\
+          ["@tanstack/query-core", "npm:5.24.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@tanstack/react-query", [\
+      ["npm:5.24.1", {\
+        "packageLocation": "../../../../../.yarn/berry/cache/@tanstack-react-query-npm-5.24.1-729e2b7a11-10c0.zip/node_modules/@tanstack/react-query/",\
+        "packageDependencies": [\
+          ["@tanstack/react-query", "npm:5.24.1"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:2aff2f060f2eaa1aead584f0d02a59b8381a7b28d8b6bddf7e4be1c580835b71c3a94b22c2b990284cc5b13977a215325775767c8124c2a2bf5de73f08c081e1#npm:5.24.1", {\
+        "packageLocation": "./.yarn/__virtual__/@tanstack-react-query-virtual-28c9c33f21/6/.yarn/berry/cache/@tanstack-react-query-npm-5.24.1-729e2b7a11-10c0.zip/node_modules/@tanstack/react-query/",\
+        "packageDependencies": [\
+          ["@tanstack/react-query", "virtual:2aff2f060f2eaa1aead584f0d02a59b8381a7b28d8b6bddf7e4be1c580835b71c3a94b22c2b990284cc5b13977a215325775767c8124c2a2bf5de73f08c081e1#npm:5.24.1"],\
+          ["@tanstack/query-core", "npm:5.24.1"],\
+          ["@types/react", "npm:18.2.56"],\
+          ["react", "npm:18.2.0"]\
+        ],\
+        "packagePeers": [\
+          "@types/react",\
+          "react"\
         ],\
         "linkType": "HARD"\
       }]\
@@ -9759,6 +9792,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["wedding", "workspace:."],\
           ["@craco/craco", "virtual:2aff2f060f2eaa1aead584f0d02a59b8381a7b28d8b6bddf7e4be1c580835b71c3a94b22c2b990284cc5b13977a215325775767c8124c2a2bf5de73f08c081e1#npm:7.1.0"],\
+          ["@tanstack/react-query", "virtual:2aff2f060f2eaa1aead584f0d02a59b8381a7b28d8b6bddf7e4be1c580835b71c3a94b22c2b990284cc5b13977a215325775767c8124c2a2bf5de73f08c081e1#npm:5.24.1"],\
           ["@types/react", "npm:18.2.56"],\
           ["@types/react-copy-to-clipboard", "npm:5.0.7"],\
           ["@types/react-dom", "npm:18.2.19"],\
